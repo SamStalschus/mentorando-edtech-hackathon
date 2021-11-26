@@ -1,0 +1,144 @@
+header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  background-color: #fb7666;
+  justify-content: center;
+  align-items: center;
+}
+header > img {
+  height: 7vh;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+.content > .left {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 38%;
+  height: 87vh;
+  /* background-color: red; */
+}
+.left > .up {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.infos >  h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 32px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.infos > h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 32px;
+  letter-spacing: 0.09em;
+  color: #000000;
+}
+.infos > span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 32px;
+  letter-spacing: 0.09em;
+  color: red;
+}
+.left > h2 {
+  position: relative;
+  display: inline-block;
+  left: -12rem;
+}
+.left > p {
+  max-width: 90%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  /* or 214% */
+  text-align: justify;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.content >.right {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  width: 50%;
+  height: 87vh;
+  flex-direction: column;
+  align-items: center;
+}
+.right >h1 {
+  font-family: Roboto;
+  margin-left: 1rem;
+}
+.right > .groupCheckbox {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.groupCheckbox > input {
+  margin: 0.4rem;
+}
+.groupCheckbox > label {
+  font-family: Roboto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  display: inline-block;
+}
+.right > button {
+  width: 20rem;
+  height: 3rem;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  letter-spacing: 0.185em;
+  text-transform: uppercase;
+  background-color: #3884FD;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  margin-top: 12rem;
+}
+
+button:hover {
+  border: .15rem solid #3884FD;
+  background-color: #fff;
+  color: #3884FD;
+}

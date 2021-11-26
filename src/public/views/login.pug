@@ -1,0 +1,34 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../style/login.css')
+  title Login
+.content
+  .left
+    img(src='../assets/mentorando/g10.png' alt='')
+    .titles
+      h1
+        | Toda pergunta tem
+        br
+        |           uma resposta.
+      h3
+        | Avan&ccedil;e seus conhecimentos com os
+        br
+        |           melhores mentores do mundo.
+  .right
+    img(src='../assets/mentorando/Logo.png' alt='')
+    form(action='/login', method='POST')
+      input(type='text' name='email' placeholder='Digite Seu Usuário')
+      input(type='password' name='password' placeholder='Digite Sua Senha')
+      button(type='submit' value='Login')
+        img(src='../assets/mentorando/entrar.svg' alt='')
+        span Entrar
+      if message
+        p 
+          label(style="color:Red") #{message}
+      .separator Criar conta com o Google 
+      button.loginWithGoogle
+        img(src='../assets/mentorando/google.svg' alt='')
+        span Crie sua conta com o Google

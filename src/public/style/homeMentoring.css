@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  background-color: #fb7666;
+  justify-content: center;
+  align-items: center;
+}
+header > img {
+  height: 7vh;
+}
+body > .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 18rem;
+  height: 18rem;
+  background: #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  border-radius: 0.3rem;
+}
+.card > img {
+  width: 100%;
+  max-width: 8rem;
+}
+.card > h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.card > p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+  /* identical to box height, or 246% */
+  letter-spacing: 0.09em;
+  text-transform: capitalize;
+  color: #000000;
+}
+.card > strong {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9rem;
+  line-height: 10px;
+  color: #ff0606;
+}
+.card > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 0.5rem;
+  width: 10rem;
+  height: 2.5rem;
+  background: #302dbd;
+  border: 1px solid #302dbd;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+button > img {
+  width: 18%;          
+  background-color: #302dbd;
+}
+button > h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.065em;
+  color: #ffffff;
+
+}

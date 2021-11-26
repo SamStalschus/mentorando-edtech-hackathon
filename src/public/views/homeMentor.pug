@@ -1,0 +1,51 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../style/homeMentor.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  title Home
+header
+  img(src='../assets/mentorando/Logo.png' alt='')
+.content
+  .left
+    .up
+      img(src=message.mentor.picture alt='')
+      .infos
+        h1 #{message.mentor.name}
+        h4 #{message.mentor.work.position} - #{message.mentor.work.company}
+        span R$ #{message.mentor.hourlyRate},00/h
+    h2 Sobre
+    p
+      | Empreendedor e Educador. Fundador da Wecando T&amp;I, empresa com foco
+      | no desenvolvimento de neg&oacute;cios atrav&eacute;s da tecnologia e inova&ccedil;&atilde;o.
+      | Apaixonado por networking e acredita ser este o insumo mais valioso
+      | para uma vida profissional de sucesso. Est&aacute; sempre pronto para um
+      | caf&eacute; e um bom bate-papo. A educa&ccedil;&atilde;o &eacute; outra paix&atilde;o e por isso busca
+      | incessantemente adquirir novos conhecimentos aplicados. Al&eacute;m disso,
+      | compartilha seu conhecimento por meio de uma carreira como professor
+      | em universidades atuando em diversos n&iacute;veis de forma&ccedil;&atilde;o. Tem como
+      | principais pilares a f&eacute;, a perseveran&ccedil;a, a paci&ecirc;ncia e a
+      | autoconfian&ccedil;a. &quot;Quem n&atilde;o sabe aonde quer chegar, nunca chega a lugar
+      | nenhum&quot;
+  .right
+    h1 Dias Livres
+    .groupCheckbox
+      input(type='checkbox')
+      label 27/11/2021 19:00h &agrave;s 20:00h
+    .groupCheckbox
+      input(type='checkbox')
+      label 27/11/2021 20:30h &agrave;s 21:30h
+    .groupCheckbox
+      input(type='checkbox')
+      label 28/11/2021 09:00h &agrave;s 10:00h
+    button(type='submit') Agendar Mentoria

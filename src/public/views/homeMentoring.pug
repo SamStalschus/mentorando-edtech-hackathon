@@ -1,0 +1,33 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../style/homeMentoring.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  title Home
+header
+  img(src='../assets/mentorando/Logo.png' alt='')
+if message.mentors
+  each mentor in message.mentors
+    div(class='card')
+      if mentor.picture
+        img(src=mentor.picture alt='')
+      else 
+        img(src='../assets/mentorando/Mentor.png' alt='')
+      h1 #{mentor.name}
+      p #{mentor.work.position} - #{mentor.work.company}
+      strong R$ #{mentor.hourlyRate},00
+      a(href=`/scheduleEvent/${mentor._id}`)
+        button
+          img(src='../assets/mentorando/IconMarcarMentoria.svg' alt='')
+          h2 Marcar Mentoria
+
