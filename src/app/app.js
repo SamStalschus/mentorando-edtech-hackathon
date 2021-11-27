@@ -3,10 +3,13 @@ import ejs from 'ejs'
 import passport from 'passport'
 import session from 'express-session'
 import bodyParser from 'body-parser'
+import MemoryStore from 'memorystore'
 
 import auth from './shared/middlewares/Auth.js'
 import createConnection from './shared/infra/mongoose/index.js'
 import { router } from './routes/index.js'
+
+var memory = MemoryStore(session)
 
 createConnection()
 
@@ -24,6 +27,9 @@ app.use(bodyParser.json())
 app.use(session({
   secret: '123',//configure um segredo seu aqui,
   resave: false,
+  store: new memory({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  }),
   saveUninitialized: false,
   cookie: { maxAge: 30 * 60 * 1000 }//30min
 }))
