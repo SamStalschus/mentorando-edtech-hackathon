@@ -34,16 +34,16 @@ function sendEvent(calendar, event) {
 
 function createEventStructure(mentor, mentoringEmail, date) {
   return {
-    summary: `Mentoria com ${mentor.username}`,
+    summary: `Mentoria com ${mentor.name}`,
     location: `Plataforma mentorando =)`,
-    description: `Você tem uma mentoria com ${mentor.username}, o link da reunião está no corpo do email =)`,
+    description: `Você tem uma mentoria com ${mentor.name}, o link da reunião está no corpo do email =)`,
     colorId: 1,
     start: {
-      dateTime: date.startDate,
+      dateTime: new Date(date.startDate),
       timeZone: 'Brazil/DeNoronha',
     },
     end: {
-      dateTime: date.endDate,
+      dateTime: new Date(date.endDate),
       timeZone: 'Brazil/DeNoronha',
     },
     attendees:
@@ -75,7 +75,7 @@ function createEventStructure(mentor, mentoringEmail, date) {
 export default {
   async scheduleEvent(date, attendees) {
     try {
-      const mentor = await userRepositories.findOne({ email: attendees.mentor }, { "username": 1, "email": 1 })
+      const mentor = await userRepositories.findOne({ email: attendees.mentor }, { "name": 1, "email": 1 })
 
       const event = createEventStructure(mentor, attendees.mentoring, date)
 

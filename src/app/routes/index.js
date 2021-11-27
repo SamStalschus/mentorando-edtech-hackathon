@@ -8,8 +8,7 @@ import ensureAuthenticate from '../shared/middlewares/ensureAuthenticate.js'
 const router = Router()
 
 router.use('/login', sessionRoutes)
-router.use('', ensureAuthenticate, usersRoutes)
+router.use('', usersRoutes)
 router.use('/scheduleEvent', ensureAuthenticate, scheduleRoutes)
-router.use('/signup', ensureAuthenticate, usersRoutes)
 
 export { router }
