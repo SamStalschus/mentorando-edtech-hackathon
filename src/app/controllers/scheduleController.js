@@ -1,4 +1,5 @@
 import calendarService from '../services/calendarService.js'
+import dateFormat from 'dateformat'
 
 import usersRepository from '../repositories/usersRepositories.js'
 
@@ -22,9 +23,17 @@ export default {
   async render(req, res) {
     try {
       const { id } = req.params
-      const user = await usersRepository.findOne({ _id: id })
+      const userId = req.session.passport.user
 
-      return res.render('homeMentor', { message: { mentor: user } });
+      const mentor = await usersRepository.findOne({ _id: id })
+      const mentoring = await usersRepository.findOne({ _id: userId })
+
+      mentor.availableTimes.forEach(time => {
+        time.startDateFormatted = dateFormat(time.startDate, "dddd, mmmm dS, h:MM:ss TT");
+        time.endDateFormatted = dateFormat(time.endDate, "dddd, mmmm dS, h:MM:ss TT");
+      })
+
+      return res.render('homeMentor', { message: { mentor: mentor, mentoring: mentoring } });
     } catch (error) {
       if (AppError) {
         res.status(error.status || 500).json({
