@@ -28,7 +28,11 @@ head
       if message
         p 
           label(style="color:Red") #{message}
-      .separator Criar conta com o Google 
-      button.loginWithGoogle
-        img(src='../assets/mentorando/google.svg' alt='')
-        span Crie sua conta com o Google
+    button.loginWithGoogle
+      //- img(src='../assets/mentorando/google.svg' alt='')
+      a(href="/signup/0") 
+        span Cadastre-se
+    br
+    .separator Faça parte da mentorando
+      a(href="/signup/1")
+        span seja um mentor clicando aqui

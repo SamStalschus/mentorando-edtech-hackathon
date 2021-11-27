@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  link(rel='stylesheet' href='../style/homeMentor.css')
+  link(rel='stylesheet' href='../style/profileMentor.css')
   link(rel='preconnect' href='https://fonts.googleapis.com')
   link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap' rel='stylesheet')
   link(rel='preconnect' href='https://fonts.googleapis.com')
@@ -13,7 +13,7 @@ head
   link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
   link(href='https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap' rel='stylesheet')
   link(rel='preconnect' href='https://fonts.googleapis.com')
-  title Agenda do mentor
+  title Seu perfil
 body
   header
     img(src='../assets/mentorando/Logo.png' alt='')
@@ -39,12 +39,14 @@ body
         | autoconfian&ccedil;a. &quot;Quem n&atilde;o sabe aonde quer chegar, nunca chega a lugar
         | nenhum&quot;
     .right
-      h1 Dias Livres
+      div(class='right')
+        h1 Selecione os dias e hor&aacute;rios em que voc&ecirc; deseja prestar 1 hora de mentoria 
+        input(id="dateTime" type='datetime-local')
+        button(type='submit' onclick="saveDate()") Cadastar Hor&aacute;rio
+      h1 Horários selecionados
       if message.mentor
         each availableTime in message.mentor.availableTimes
           .groupCheckbox
-            label #{availableTime.startDateFormatted} ate #{availableTime.endDateFormatted}
-            button(class="btn" onclick='sendData("'+  message.mentoring.email +'","'+  message.mentor.email +'", "'+  availableTime.startDate +'", "'+  availableTime.endDate +'")' ) Agendar
-      else
-        p Nenhum dia live :(
-  script(type='text/javascript', src="../js/homeMentor.js")
+            label(class="daysSelected") #{availableTime.startDateFormatted}
+
+  script(type='text/javascript', src="../js/profileMentor.js")

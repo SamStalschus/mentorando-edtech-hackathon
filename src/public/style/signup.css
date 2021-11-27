@@ -1,0 +1,156 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+body > .content {
+  width: 100%;
+  max-width: 1280px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content > .left {
+  width: 50%;
+  height: 100%;
+  background-color: #c3d0f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.left >img {
+  width: 300px;
+  height: auto;
+  padding-bottom: 40px;
+}
+.left > h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  padding-bottom: 40px;
+}
+.left > h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.content > .right {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right > img {
+  padding-bottom: 40px;
+}
+
+.right > form {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+form > input {
+  width: 300px;
+  height: 45px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 2px solid #a8a8b3;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+form > .description{
+  width: 620px;
+  height: 150px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 2px solid #a8a8b3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: start;
+}
+input::placeholder {
+  padding-left: 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #a8a8b3;
+}
+form > button {
+  width: 300px;
+  height: 45px;
+  background: #ea4335;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+form > button > img {
+  margin: 0;
+  padding: 0;
+  padding-right: 2px;
+}
+form > button > span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fefefe;
+  letter-spacing: 0.06em;
+}
+button:hover {
+  filter: brightness(0.9);
+}
+form > .separator {
+  font-size: 14px;
+  color: #a8a8b3;
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+}
+.separator::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #a8a8b3;
+  margin-right: 16px;
+}
+.separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #a8a8b3;
+  margin-left: 16px;
+}
+form > .loginWithGoogle {
+  background-color: transparent;
+  border: 3px solid #fb7666;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #fb7666;
+}
+.loginWithGoogle > span{
+  color: #fb7666;
+  margin-left: 4px;
+}

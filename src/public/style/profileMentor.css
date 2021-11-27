@@ -9,11 +9,12 @@
 header > img {
   height: 7vh;
 } */
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 body > .content {
   width: 100%;
@@ -41,7 +42,8 @@ body > .content {
   flex-direction: row;
   justify-content: space-evenly;
 }
-.infos >  h1 {
+
+.infos > h1 {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -86,7 +88,7 @@ body > .content {
   letter-spacing: 0.03em;
   color: #000000;
 }
-.content >.right {
+.content > .right {
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
   background-color: #fff;
   border-radius: 15px;
@@ -96,9 +98,16 @@ body > .content {
   flex-direction: column;
   align-items: center;
 }
-.right >h1 {
+.right > h1 {
   font-family: Roboto;
-  margin-left: 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .right > .groupCheckbox {
   margin-left: 1rem;
@@ -106,7 +115,7 @@ body > .content {
   display: flex;
   flex-direction: row;
   width: 100%;
-}
+}  
 .groupCheckbox > input {
   margin: 0.4rem;
 }
@@ -118,9 +127,10 @@ body > .content {
   font-size: 1rem;
   line-height: 1.7rem;
   display: inline-block;
-}
-.right > .btn {
   margin-left: 1rem;
+}
+.right > button {
+  margin-top: 1rem;
   display: inline-block;
   font-family: Roboto;
   font-style: normal;
@@ -132,9 +142,14 @@ body > .content {
   border: none;
   border-radius: 0.5rem;
   color: red; 
+/* import IconMentoring from '../../assets/mentorando/mentoring.svg'
+import IconCalendar from '../../assets/mentorando/calendar.svg' */        
 }
-
-.btn:hover {
+.right > button:hover {
   background-color: #fefefe;
   color: #000000;
 } 
+
+.daysSelected:hover {
+  color: #fb7666;
+}

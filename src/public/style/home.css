@@ -107,7 +107,7 @@ a {
   text-decoration: none;
 }
 
-header {
+/* header {
 width: 100vw;
 height: 10vh;
 display: flex;
@@ -117,4 +117,4 @@ align-items: center;
 }
 header > img {
   height: 7vh;
-}
+} */
