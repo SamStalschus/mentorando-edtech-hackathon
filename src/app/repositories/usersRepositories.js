@@ -12,6 +12,14 @@ export default {
       console.log(`[User create] - ${error.message}`)
     }
   },
+  async update(filter, set) {
+    try {
+      return await User.update(filter, set)
+
+    } catch (error) {
+      console.log(`[User updated] - ${error.message}`)
+    }
+  },
 
   async findOne(filter, projection) {
 

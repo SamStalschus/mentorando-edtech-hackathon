@@ -20,6 +20,19 @@ export default {
 
     usersRepository.create(user)
   },
+  async createAvailableTimes(userId, date) {
+    const startDate = new Date(date)
+    const endDate = new Date(date)
+
+    endDate.setHours(endDate.getHours() + 1)
+
+    const finalDate = {
+      startDate,
+      endDate
+    }
+
+    return await usersRepository.update({ _id: userId }, { $push: { availableTimes: finalDate } })
+  },
   async getUserType(userId) {
 
     const user = await usersRepository.findOne({ _id: userId })
@@ -32,5 +45,9 @@ export default {
   async getAllMentors() {
     const mentors = await usersRepository.findAllMentors()
     return mentors
+  },
+  async getMentor(id) {
+    const mentor = await usersRepository.findOne({ _id: id })
+    return mentor
   }
 }
