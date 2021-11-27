@@ -7,7 +7,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
-/* header {
+header {
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -17,7 +17,7 @@ body {
 }
 header > img {
   height: 7vh;
-} */
+}
 body > .card {
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@ body > .card {
   line-height: 10px;
   color: #ff0606;
 }
-.card > button {
+.card a > button {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -76,11 +76,11 @@ body > .card {
   box-sizing: border-box;
   border-radius: 8px;
 }
-button > img {
+a > button > img {
   width: 18%;          
   background-color: #302dbd;
 }
-button > h2 {
+a > button > h2 {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
