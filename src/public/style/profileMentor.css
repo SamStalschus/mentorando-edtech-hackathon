@@ -1,14 +1,19 @@
-/* header {
+html body{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+header {
   width: 100vw;
   height: 10vh;
   display: flex;
-  background-color: #fb7666;
+  background-color: #3884FD;
   justify-content: center;
   align-items: center;
 }
 header > img {
   height: 7vh;
-} */
+}
 
 body {
 display: flex;
@@ -42,16 +47,22 @@ body > .content {
   flex-direction: row;
   justify-content: space-evenly;
 }
+.left > .up img{
+  width: 30%;
+  height: auto;
+}
+
 
 .infos > h1 {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #000000;
+  margin-left: .5rem;
 }
 .infos > h4 {
   font-family: Roboto;
@@ -61,6 +72,8 @@ body > .content {
   line-height: 32px;
   letter-spacing: 0.09em;
   color: #000000;
+  margin-left: .5rem;
+
 }
 .infos > span {
   font-family: Roboto;
@@ -70,8 +83,14 @@ body > .content {
   line-height: 32px;
   letter-spacing: 0.09em;
   color: red;
+  margin-left: .5rem;
+
 }
 .left > h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.09em;
   position: relative;
   display: inline-block;
   left: -12rem;
@@ -151,5 +170,5 @@ import IconCalendar from '../../assets/mentorando/calendar.svg' */
 } 
 
 .daysSelected:hover {
-  color: #fb7666;
+  color: #3884FD;
 }
