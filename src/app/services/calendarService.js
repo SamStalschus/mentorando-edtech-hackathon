@@ -68,6 +68,10 @@ function createEventStructure(mentor, mentoringEmail, date) {
         requestId: 'somerequestid',
       },
     },
+    "guestsCanInviteOthers": true,
+    "guestsCanModify": true,
+    "guestsCanSeeOtherGuests": true,
+    "anyoneCanAddSelf": true
   }
 
 }

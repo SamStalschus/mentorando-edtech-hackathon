@@ -44,7 +44,7 @@ body
         each availableTime in message.mentor.availableTimes
           .groupCheckbox
             label #{availableTime.startDateFormatted} ate #{availableTime.endDateFormatted}
-            button(class="btn" onclick='sendData("'+  message.mentoring.email +'","'+  message.mentor.email +'", "'+  availableTime.startDate +'", "'+  availableTime.endDate +'")' ) Agendar
+            button(class="btn" onclick='sendData("'+  message.mentoring.email +'","'+  message.mentor.email +'", "'+  availableTime.startDate +'", "'+  availableTime.endDate +'", "'+  availableTime._id +'")' ) Agendar
       else
         p Nenhum dia live :(
   script(type='text/javascript', src="../js/homeMentor.js")

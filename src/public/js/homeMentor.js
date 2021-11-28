@@ -1,6 +1,6 @@
 const xhttp = new XMLHttpRequest()
 
-function sendData(mentoringEmail, mentorEmail, startDate, endDate) {
+function sendData(mentoringEmail, mentorEmail, startDate, endDate, _id) {
   console.log(mentoringEmail, mentorEmail, startDate, endDate)
   var url = `/scheduleEvent`
 
@@ -24,7 +24,8 @@ function sendData(mentoringEmail, mentorEmail, startDate, endDate) {
     "date": {
       "startDate": startDate,
       "endDate": endDate
-    }
+    },
+    _id
   })
   )
 }

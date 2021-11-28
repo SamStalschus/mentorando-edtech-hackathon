@@ -7,7 +7,9 @@ export default {
 
   async create(req, res) {
     try {
-      const { date, attendees } = req.body
+      const { date, attendees, _id } = req.body
+
+      usersRepository.update({ "email": attendees.mentor }, { $pull: { 'availableTimes': { _id: _id } } })
 
       await calendarService.scheduleEvent(date, attendees)
 
