@@ -16,6 +16,9 @@ head
   title Mentores disponíveis
 header
   img(src='../assets/mentorando/Logo.png' alt='')
+  a(href='/logout' class='logout')
+    button(type='submit')
+      img(src='../assets/mentorando/LogoutIcon.svg' alt='')
 if message.mentors
   each mentor in message.mentors
     div(class='card')
