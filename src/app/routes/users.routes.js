@@ -9,5 +9,6 @@ usersRoutes.get('/', ensureAuthenticate, userController.login)
 usersRoutes.get('/signup/:code', userController.signup)
 usersRoutes.get('/mentoring', ensureAuthenticate, userController.mentoringScreen)
 usersRoutes.post('/availabletime', ensureAuthenticate, userController.createAvailableTimes)
+usersRoutes.get('/logout', ensureAuthenticate, userController.logout)
 
 export { usersRoutes }

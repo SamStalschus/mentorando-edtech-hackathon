@@ -89,6 +89,19 @@ export default {
       }
     }
   },
+  async logout(req, res) {
+    try {
+      req.logout()
+      res.redirect('/')
+      // res.render('home', { message: null });
+    } catch (error) {
+      if (AppError) {
+        res.status(error.status || 500).json({
+          message: error.message
+        })
+      }
+    }
+  },
   async signup(req, res) {
     try {
       if (req.params.code == 1)
