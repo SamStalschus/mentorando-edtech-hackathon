@@ -28,7 +28,7 @@ This project was developed with the following technologies:
 - MongoDB
 - Mongoose
 - API Google Calendar
-- HTML
+- Pug
 - CSS
 
 
